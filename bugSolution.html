@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // Check if the element exists before adding an event listener.
+    const element = document.getElementById('myDiv');
+    if (element) {
+      element.addEventListener('click', function() {
+        alert('This will alert!');
+      });
+    } else {
+      console.error("Element 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>

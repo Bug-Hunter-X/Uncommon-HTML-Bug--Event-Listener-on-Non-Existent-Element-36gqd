@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+  <script>
+    // This script attempts to add an event listener to a non-existent element.
+    document.getElementById('nonExistentElement').addEventListener('click', function() {
+      alert('This should not happen!'); 
+    });
+  </script>
+</body>
+</html>
